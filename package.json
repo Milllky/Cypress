@@ -1,0 +1,41 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    
+    "desktop:chrome": "cypress run --browser chrome",
+    "desktop:firefox": "cypress run --browser firefox",
+    "desktop:edge": "cypress run --browser edge",
+    "desktop:headless": "cypress run --headless",
+    "desktop:headed": "cypress run --headed",
+
+  
+    "laptop:chrome": "cypress run --browser chrome --config-file cypress.config.laptop.js",
+    "laptop:firefox": "cypress run --browser firefox --config-file cypress.config.laptop.js",
+    "laptop:edge": "cypress run --browser edge --config-file cypress.config.laptop.js",
+    "laptop:headless": "cypress run --headless --config-file cypress.config.laptop.js",
+    "laptop:headed": "cypress run --headed --config-file cypress.config.laptop.js",
+
+
+    "mobile:chrome": "cypress run --browser chrome --config-file cypress.config.mobile.js",
+    "mobile:firefox": "cypress run --browser firefox --config-file cypress.config.mobile.js",
+    "mobile:edge": "cypress run --browser edge --config-file cypress.config.mobile.js",
+    "mobile:headless": "cypress run --headless --config-file cypress.config.mobile.js",
+    "mobile:headed": "cypress run --headed --config-file cypress.config.mobile.js",
+
+
+    "test:all": "npm run desktop:headless && npm run laptop:headless && npm run mobile:headless",
+    "test:all-headed": "npm run desktop:headed && npm run laptop:headed && npm run mobile:headed",
+    "test:all-chrome": "npm run desktop:chrome && npm run laptop:chrome && npm run mobile:chrome",
+    "test:all-browsers": "npm run test:all-chrome && npm run test:all-firefox && npm run test:all-edge"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^15.2.0"
+  }
+}
